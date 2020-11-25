@@ -1,0 +1,45 @@
+
+.content{
+    margin-top: 2%;
+    width: 50%;
+
+}
+
+.container{
+    width: 80%;
+    padding: 10px;
+    margin: 2px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.element{
+    text-align: center;
+    margin: 5px;
+    width: 30%;
+    
+    color: #fff;
+    text-align: center;
+    height: 200px;
+    cursor: pointer;
+}
+.btnSearch{
+    background-color: aqua;
+}
+.containerModal{
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.element-info{
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<div ng-app="app">
+    <div ng-controller="listController">
+        <div style="background-color: teal; width: 100%; ">.
+        </div>
+        <div layout="row" layout-align="center center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" style="width: 10%; margin-right: 3%;">
+
+            <div class="content">
+                <md-input-container class="md-block">
+                    <label>Busca un Pokemon</label>
+                    <input md-maxlength="30" required md-no-asterisk  ng-model="textSearch">
+                  </md-input-container>                  
+            </div>
+        </div>
+        <div layout="row" layout-align="center"     >
+            <dir-pagination-controls style="font-size: 25px; font-weight: bold;"></dir-pagination-controls>
+            </div>
+        <div layout="row" layout-align="center">
+            <div class="container">
+                <div class="element element1" dir-paginate="pokemon in dataSource | itemsPerPage: 20 | filter : textSearch ">
+                    <md-card style="background-color: teal;" ng-click="openModal($event,pokemon)">
+                        <md-card>
+                            <md-card-content layout-align="center">
+                                <img ng-src="{{pokemon.img}}" class="md-card-image" alt="image caption" style="width: 150px; height: 105px;">
+                            </md-card-content>
+                            <md-card-actions layout="row" layout-align="center">
+                                <strong>{{ pokemon.name }}</strong>
+                            </md-card-actions>
+                        </md-card>
+                    </md-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
